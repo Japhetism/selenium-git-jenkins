@@ -7,11 +7,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
 import org.openqa.selenium.JavascriptExecutor;
 
 public class registration {
 	
-	public static void main (String args []) {
+	@Test
+	public static void phpsite () {
 		String projectPath = System.getProperty("user.dir");
 		
 		System.setProperty("webdriver.chrome.driver", projectPath+"\\drivers\\chromedriver.exe");
@@ -85,11 +87,11 @@ public class registration {
 		WebElement generatePassword = driver.findElement(By.xpath("//*[@id='containerPassword']/div[4]/button"));
 		generatePassword.click();
 		
-		WebElement joinMailingList = driver.findElement(By.xpath("//*[@id='frmCheckout']/div[3]/div/div/span[2]"));
-		joinMailingList.sendKeys("Babatunde");
-		
-		WebElement uncheckRobot = driver.findElement(By.xpath("//*[@id='recaptcha-anchor']/div[1]"));
-		uncheckRobot.sendKeys("Babatunde");
+//		WebElement joinMailingList = driver.findElement(By.xpath("//*[@id='frmCheckout']/div[3]/div/div/span[2]"));
+//		joinMailingList.sendKeys("Babatunde");
+//		
+//		WebElement uncheckRobot = driver.findElement(By.xpath("//*[@id='recaptcha-anchor']/div[1]"));
+//		uncheckRobot.sendKeys("Babatunde");
 		
 		driver.close();
 		
