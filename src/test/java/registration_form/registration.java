@@ -37,12 +37,12 @@ public class registration {
 		
 		//*[@id="containerNewUserSignup"]/div[2]/div[4]/div/div/div/ul/li[160]
 		
-		WebElement callingCode = driver.findElement(By.xpath("//*[@id='containerNewUserSignup']/div[2]/div[4]/div/div/div/ul/li[160]"));
-		callingCode.click();
+//		WebElement callingCode = driver.findElement(By.xpath("//*[@id='containerNewUserSignup']/div[2]/div[4]/div/div/div/ul/li[160]"));
+//		callingCode.click();
 		
-//		WebElement callingCode = driver.findElement(By.xpath("//*[@id='containerNewUserSignup']/div[2]/div[4]/div/div/div/div/div[2]"));
-//		String script = "arguments[0].innerHTML='+234'";
-//		((JavascriptExecutor) driver).executeScript(script, callingCode);
+		WebElement callingCode = driver.findElement(By.xpath("//*[@id='containerNewUserSignup']/div[2]/div[4]/div/div/div/div/div[2]"));
+		String script = "arguments[0].innerHTML='+234'";
+		((JavascriptExecutor) driver).executeScript(script, callingCode);
 		//callingCode.innerText = "234";
 		//*[@id="populatedCountryCodephonenumber"]
 		
@@ -90,6 +90,8 @@ public class registration {
 		
 		WebElement uncheckRobot = driver.findElement(By.xpath("//*[@id='recaptcha-anchor']/div[1]"));
 		uncheckRobot.sendKeys("Babatunde");
+		
+		driver.close();
 		
 	}
 }
